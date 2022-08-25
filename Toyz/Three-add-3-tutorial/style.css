@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+nav{
+    z-index: 3;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0px 22px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.425), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    border-bottom: 1px solid rgb(219,220,221);
+}
+
+nav img{
+    display: block;
+    float: left;
+    margin-right: 70px;
+    margin-left: 100px;
+    height: 50px;
+    margin-top: 12.5px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    font-family: 'Source Sans Pro', sans-serif ;
+    font-weight: 800;
+}
+
+li input[type=text]{
+    float: right;
+    padding: 12px 16px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 17px 17px 0px 0px;
+    font-size: 14px;
+    margin: 15.5px 0px;
+    margin-right: 50px !important;
+}
+
+li.left{
+    float: left;
+}
+
+li.right{
+    float: right;
+    margin-right: 70px;
+}
+  
+li a {
+    font-size: 18px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 24px 16px;
+    text-decoration: none;
+}
+
+li.right a{
+    padding: 8px 22px;
+    margin: 15.5px 0px;
+    border-radius: 25px;
+    color: white;
+    background-color: #04AA6D;
+    border: 1px solid #04AA6D;
+}
+
+li.left a:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+li.right a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+.container-main{
+    width: 40%;
+    position: absolute;
+    left: 230px;
+    top: 250px;
+    z-index: 1;
+}
+
+p.large{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p em{
+    font-family: 'Bangers', sans-serif !important;
+    font-weight: normal;
+    font-size: 60px;
+    text-shadow: 2px 2px #000000;
+    letter-spacing: 3px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 800;
+    color: white;
+    font-size: 30px;
+}
+
+.btn{
+    width: 170px;
+    font-size: 22px;
+    font-weight:600;
+    text-align: center;
+    margin-top: 100px;
+    padding: 26px 22px;
+    border-radius: 40px;
+    background-image: linear-gradient(to right, #6600ff, #ff00d4);
+    box-shadow: 0 2px 20px 0 rgb(0, 0, 0), 0 2px 20px 0 rgb(0 0 0 / 12%);
+}
+
+.btn a{
+    text-decoration: none !important;
+    color: white !important;
+    text-shadow: 2px 2px #000000;
+}
+
+.centre{
+    width: auto;
+    padding: 10px 20px;
+    position: absolute;
+    left: 48%;
+    top: 840px;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 40px;
+    background: rgb(0, 0, 0);
+}
+
+.centre p{
+    font-size: 20px;
+}
+
+.logo{
+    text-decoration: none;
+    display: block;
+    color:  linear-gradient(to right, #169502, #c0fcc9);
+    font-size: 40px;
+    text-align: center;
+    padding: 14px 16px;
+    padding-right: 100px !important;
+}
+
+.scene,
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #169502, #c0fcc9);
+}
+
+.hue-shift{
+    animation: hue-shift 5s infinite alternate;
+}
+
+/*Animations*/
+
+@keyframes hue-shift{
+    from{
+        filter: hue-rotate(0);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: 'Bangers'; /*a name to be used later*/
+    src: url(fonts/Bangers.ttf); /*URL to font*/
+}
