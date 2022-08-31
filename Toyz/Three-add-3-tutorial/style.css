@@ -9,78 +9,82 @@ body{
     overflow: hidden;
 }
 
-nav{
+.navigation-bar{
     z-index: 3;
+    top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    padding: 0px 22px;
+    padding: 0px 3vw;
     border-bottom: 1px solid rgb(219,220,221);
 }
 
-nav img{
+.navigation-bar .navigation-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.navigation-bar .navigation-box .box-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation-bar .navigation-box .box-left .logo{
     display: block;
-    float: left;
-    margin-right: 70px;
-    margin-left: 100px;
-    height: 50px;
-    margin-top: 12.5px;
+    margin-right: 4vw;
+    margin-left: 6vw;
+    height: 3em;
 }
 
-ul{
+.navigation-bar .navigation-box li{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li{
     font-family: 'Source Sans Pro', sans-serif ;
     font-weight: 800;
 }
 
-li input[type=text]{
-    float: right;
-    padding: 12px 16px;
-    border: 1px solid rgb(165, 165, 165);
-    border-radius: 17px 17px 0px 0px;
-    font-size: 14px;
-    margin: 15.5px 0px;
-    margin-right: 50px !important;
-}
-
-li.left{
-    float: left;
-}
-
-li.right{
-    float: right;
-    margin-right: 70px;
-}
-  
-li a {
-    font-size: 18px;
+.box-left li a{
     display: block;
+    font-size: 1.1em;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 24px 16px;
     text-decoration: none;
 }
 
-li.right a{
-    padding: 8px 22px;
-    margin: 15.5px 0px;
+.box-left li a:hover{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.navigation-bar .navigation-box .box-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 4vw;
+}
+
+.search{
+    padding: 12px 16px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 17px 17px 0px 0px;
+    font-size: 0.8em;
+    margin-right: 2.9vw;
+}
+  
+.button a{
+    font-size: 0.8em;
+    text-decoration: none;
+    display: block;
+    padding: 12px 24px;
     border-radius: 25px;
     color: white;
     background-color: #04AA6D;
     border: 1px solid #04AA6D;
 }
 
-li.left a:hover {
-    background-color: #04AA6D;
-    color: white;
-}
-
-li.right a:hover {
+.button a:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: 1px solid black;
@@ -162,11 +166,11 @@ canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    
 }
 
 .scene{
     background-image: linear-gradient(to right, #169502, #c0fcc9);
+    z-index: 1;
 }
 
 .hue-shift{
